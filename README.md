@@ -56,20 +56,13 @@ npm install @adithya-naik/cmd-tracker
 npx tracker init
 ```
 
-**Step 2 — Enable automatic capture:**
-```bash
-npx tracker hook
-source ~/.bashrc                # bash
-source ~/.zshrc                 # zsh (Mac)
-source ~/.config/fish/config.fish  # fish
-```
+**Step 2 — Import your commands:**
+## Quick Start - Manual Import
 
-**Step 3 — Work normally! Then revise:**
-```bash
-npx tracker list
-```
-
-That's it! Every command you type is now saved automatically 🪄
+### Step 1: Export your shell history
+Run this in your terminal:
+'''bash
+history > commands.txt
 
 ---
 
@@ -78,8 +71,7 @@ That's it! Every command you type is now saved automatically 🪄
 | Command | Description |
 |---|---|
 | `tracker init` | Initialize tracker in your project |
-| `tracker hook` | Enable automatic command capture |
-| `tracker unhook` | Disable automatic command capture |
+| `tracker import <file>` | Import commands from a file |
 | `tracker list` | Show all saved commands |
 | `tracker list <category>` | Filter by category |
 | `tracker search <query>` | Search through commands |
