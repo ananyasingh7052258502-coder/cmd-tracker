@@ -61,9 +61,9 @@ npx tracker init
 
 ### Step 1: Export your shell history
 Run this in your terminal:
-'''bash
+```bash
 history > commands.txt
-
+```
 ---
 
 ## 📋 All Commands
