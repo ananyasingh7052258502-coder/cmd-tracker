@@ -34,7 +34,8 @@ const packageJson = require('../package.json');
  * bin/ → go up one level → ../
  * then into src/commands/init.js
  */
-const { initCommand } = require('../src/commands/init');
+const { initcommand } = require('../src/commands/init');
+const { importcommand } = require('../src/commands/import');
 
 /*
  * Import our save command function
@@ -49,6 +50,12 @@ const { searchCommand } = require('../src/commands/search');
 const { statsCommand } = require('../src/commands/stats');
 const { clearCommand } = require('../src/commands/clear');
 const { exportCommand } = require('../src/commands/export');
+const { importCommand } = require('../src/commands/import');
+
+program
+    .command('import <file>')
+    .description('Import commands from a file')
+    .action(importCommand);
 const { hookCommand, unhookCommand } = require('../src/commands/hook');
 const { favoriteCommand, favoritesCommand } = require('../src/commands/favorite');
 /*
@@ -267,5 +274,14 @@ program
  * ["node", "tracker.js", "init"] → runs init command
  * ["node", "tracker.js", "list"] → runs list command (coming soon)
  */
+
+// Import command
+program
+  .command('import <filepath>')
+  .description('Import commands from file and show summary')
+  .action((filepath) => {
+    importcommand(filepath);
+  });
+
 
 program.parse(process.argv);
