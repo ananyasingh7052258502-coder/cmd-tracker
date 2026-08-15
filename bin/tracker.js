@@ -50,7 +50,6 @@ const { searchCommand } = require('../src/commands/search');
 const { statsCommand } = require('../src/commands/stats');
 const { clearCommand } = require('../src/commands/clear');
 const { exportCommand } = require('../src/commands/export');
-const { importCommand } = require('../src/commands/import');
 
 program
     .command('import <file>')
