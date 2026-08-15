@@ -34,8 +34,8 @@ const packageJson = require('../package.json');
  * bin/ → go up one level → ../
  * then into src/commands/init.js
  */
-const { initcommand } = require('../src/commands/init');
-const { importcommand } = require('../src/commands/import');
+const { initCommand } = require('../src/commands/init');
+const { importCommand } = require('../src/commands/import');
 
 /*
  * Import our save command function
