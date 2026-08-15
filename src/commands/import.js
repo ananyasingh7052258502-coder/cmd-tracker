@@ -1,13 +1,13 @@
 const fs = require('fs');
 const path = require('path')
 
-async function importcommand(filepath) {
+async function importCommand(filepath) {
    let importedCount = 0;
    let skippedCount = 0;
    let sanitizedCount = 0;
    
    try{
-    const data = fs.readFileSync(filepath, 'utf8').split('\n');
+    const data = fs.readFileSync(filepath, 'utf8').split('\n'),filter(line => line.trim() !== '');
 
     data.forEach(line => {
         line = line.trim();
